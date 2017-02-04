@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+// 11. One way of encoding a message is called a "square code". Given a message like:
+
+// "Have a nice day!"
+
+// We determine an appropriate size of a square or rectangle to contain this message without spaces like so:
+
+// have
+// anic
+// eday
+// !
+// square root/floor
+// We then read the square in columns, which gives us our encoded message:
+
+// hae! and via ecy
+
+// Write two functions, called encodeSquare and decodeSquare. encodeSquare should be able to encrypt any arbitrary string, and decodeSquare should be able to unencrypt any arbitrary encoded string. The unencrypted string will have no spaces, and that's ok.
+
+        var stringCheese = "have a nice day!";
+        var initialArray = stringCheese.split(" ");
+        var stringyString = initialArray.join("");
+        console.log(stringyString)
+        console.log(stringyString.length)
+        var size;
+        var newArray = [];
+
+        var chunks = [];
+        var chunkSize = Math.floor(Math.sqrt(stringyString.length));
+
+        while (stringyString) {
+            if (stringyString.length < chunkSize) {
+                chunks.push(stringyString);
+                break;
+            }
+            else {
+                chunks.push(stringyString.substr(0, chunkSize));
+                stringyString = stringyString.substr(chunkSize);
+            }
+        }
+console.log(chunks)
+  
+        // var squareString = ""; 
+        // squareString = chunks.join("" + "\n") 
+
+
+
+        // var squareArray = [];
+        // var squareString = "";
+        // for (i = 0; i < chunks.length; i++) {
+        //     squareString += chunks[i].substr(0, 1)
+        // }
+        // console.log(squareString)
+
+// function divideWords(string, size) {
+//     var divided = Math.ceil(string.length / size), 
+//     chunks = newArray(divided);
+
+//     for (var i = 0, o =0; i < divided; ++i, o +=size)
+//     {chunks[i] = strings.substr(0, size)
+
+//     }
+//     return chunks;
+// }
+// console.log(divideWords("have a nice day", size))
+
+
+// function chunkSubstr(str, size) {
+//   var numChunks = Math.ceil(str.length / size),
+//       chunks = new Array(numChunks);
+
+//   for(var i = 0, o = 0; i < numChunks; ++i, o += size) {
+//     chunks[i] = str.substr(o, size);
+//   }
+
+//   return chunks;
+// }
+    </script>
+</body>
+
+</html>
