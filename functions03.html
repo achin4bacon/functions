@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>         
+        function missingNo(someArray) {
+            for (var i = 0; i < someArray.length - 1; i++) {
+                if (someArray[0] !== 1) {
+                    return 1
+                }
+                else if (someArray[i] + 1 !== someArray[i + 1]) {
+                    return someArray[i] + 1
+                }
+            }
+        }
+        console.log(missingNo([1, 2, 3, 5, 6, 7]));
+    </script>
+</body>
+
+</html>

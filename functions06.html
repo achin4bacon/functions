@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Functions 6</title>
+</head>
+
+<body>
+    <script> 
+
+        function joinArray(array1, array2) {
+            if (array1.sort().join(",") === array2.sort().join(",")) {
+                return true;
+            }
+            return false;
+        }
+        console.log(joinArray([1, 2, 3, 4, 5], [5, 4, 3, 2, 1])); //true
+        console.log(joinArray([], [])); //true
+        console.log(joinArray([2, 3, 4], [1, 2, 3]));// -> false
+        console.log(joinArray(["a", "c", "b"], ["a", "b", "c"])); // -> true
+        console.log(joinArray([1, 1, 1], [1, 1, 1, 1])); //false
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        ogArray = [1,5,7,3,1,5,7];
+        newArray = [];
+        function cut(cutoff) {
+            for (var i = 0; i < ogArray.length; i++) {
+                if (ogArray[i] <= cutoff) {
+                    newArray.push(ogArray[i]);
+                }
+                else {
+                    ogArray[i] = cutoff; 
+                    newArray.push(ogArray[i]);
+                }
+            }
+            return newArray;
+        }
+        console.log(cut(3));
+
+    </script>
+</body>
+
+</html>
