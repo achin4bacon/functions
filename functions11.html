@@ -11,8 +11,6 @@
 
         var stringCheese = "have a nice day!";
         var stringyString = stringCheese.split(" ").join("");
-        console.log(stringyString)
-        console.log(stringyString.length)
         var size;
         var newArray = [];
 
@@ -29,9 +27,7 @@
             }
         }
         for (var x  in newArray ) {
-            console.log(newArray[x])
-            for (var y in newArray[x]) {
-                console.log(newArray[y][x])
+            for (var y in newArray[0]) {
                 if (newArray[y][x]){
                 squareCode += newArray[y][x]; 
                 

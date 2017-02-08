@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Functions 12</title>
+</head>
+<body>
+    <script>
+var input = "We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America"; 
+input = input.toLowerCase(); 
+
+var bigrams = {};
+
+for (var i = 0; i<input.length; i++){
+    var pair = input[i-1] + input[i];
+    if (bigrams[pair] === undefined) {
+        bigrams[pair] = 0; 
+    }
+    bigrams[pair] = bigrams[pair] + 1;
+    
+}   
+
+var finalArray = [];
+
+for (var bigram in bigrams) {
+    var current = {
+    bigram: bigram, 
+    count: bigrams[bigram]
+    };
+
+    finalArray.push(current); 
+}
+
+function sortFtn(a, b){
+    return b.count - a.count; 
+};
+
+finalArray.sort(sortFtn);
+
+var total = input.length - 1; 
+var percent = finalArray[i];
+
+for (var i = 0; i < 10; i++){
+    console.log(finalArray[i].bigram + ":" + percent); 
+}
+
+    </script> 
+</body>
+</html>
